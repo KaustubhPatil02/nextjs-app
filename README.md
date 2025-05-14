@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧪 AI Agent Chatbot (Experimental)
 
-## Getting Started
+Welcome to the **AI Agent Chatbot** — an experimental Next.js app that lets you chat with an OpenAI-powered assistant using both text and voice input.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Quick Start
+
+1. **Clone & Install**
+   ```bash
+   git clone <your-repo-url>
+   cd ai-agent/nextjs-app
+   npm install
+   ```
+
+2. **Set up API Keys**
+
+   Create a `.env.local` file in the root of `nextjs-app`:
+
+   ```
+   OPENAI_API_KEY=your_openai_key
+   HF_API_KEY=your_huggingface_key # (optional)
+   ```
+
+3. **Run the Dev Server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in Browser**
+
+   Visit [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🗣️ Features
+
+- **Chat with AI**: Type or speak your message, get instant AI responses.
+- **Voice Input**: Uses browser speech recognition (Webkit only).
+- **Voice Output**: AI replies are spoken aloud.
+- **Modern UI**: Clean, minimal, and responsive design.
+- **OpenAI API**: Powered by GPT-3.5-turbo (requires valid API key).
+
+---
+
+## ⚠️ Experimental Notes
+
+- **API Quota**: You must have a valid OpenAI API key with quota.
+- **Voice Input**: Only works in browsers supporting `webkitSpeechRecognition` (e.g., Chrome).
+- **No Data Storage**: This app does not store chat history.
+- **Errors**: API errors (quota, network, etc.) are shown in the UI.
+
+---
+
+## 🛠️ Project Structure
+
+```
+nextjs-app/
+  app/
+    api/
+      chat/
+        route.js      # API route for chat
+    page.tsx          # Main UI
+    layout.tsx        # App layout
+  .env.local          # Your API keys (not committed)
+  README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧑‍💻 Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Edit `app/page.tsx` for UI changes.
+- Edit `app/api/chat/route.js` for backend logic.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Resources
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js App Router Docs](https://nextjs.org/docs/app)
+- [OpenAI Node SDK](https://www.npmjs.com/package/openai)
+- [SpeechRecognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧪 Status
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is **experimental** and not production-ready.  
+Feel free to fork, experiment, and contribute!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
