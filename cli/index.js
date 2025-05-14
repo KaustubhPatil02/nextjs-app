@@ -7,7 +7,7 @@ async function chat() {
     { name: 'message', message: 'You:', type: 'input' }
   ]);
 
-  const res = await axios.post('http://localhost:5000/chat', { message });
+  const res = await axios.post('http://localhost:3000/api/chat', { message });
   console.log(`AI: ${res.data.reply}`);
   say.speak(res.data.reply);
 }
